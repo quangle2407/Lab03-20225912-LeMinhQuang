@@ -3,6 +3,7 @@ Nếu  tạo một phương thức khởi tạo để xây dựng một đối t
 Có, Java cho phép điều này, nhưng chúng ta cần tạo ra một số điểm khác biệt giữa các phương thức đó để Java có thể biết nên sử dụng phương thức nào.
 
 //Toi da sua o day 23/11
+//toi da sua o day bai 3
 
 public class DVD {
     private String title;
