@@ -1,0 +1,40 @@
+Nếu  tạo một phương thức khởi tạo để xây dựng một đối tượng DVD theo tiêu đề, sau đó tạo một phương thức khởi tạo để xây dựng DVD theo thể loại, Java có cho phép làm điều này không?
+
+Có, Java cho phép điều này, nhưng chúng ta cần tạo ra một số điểm khác biệt giữa các phương thức đó để Java có thể biết nên sử dụng phương thức nào.
+
+
+public class DVD {
+    private String title;
+    private String category;
+
+    // Phương thức khởi tạo để xây dựng DVD theo tiêu đề
+    public DVD(String title) {
+        this.title = title;
+        this.category = "Unknown"; // Thể loại mặc định nếu không được cung cấp
+    }
+
+    // Phương thức khởi tạo để xây dựng DVD theo thể loại
+    public DVD(String category, boolean isCategory) {
+        this.category = category;
+        this.title = "Untitled"; // Tiêu đề mặc định nếu không được cung cấp
+    }
+
+    // Phương thức hiển thị thông tin DVD
+    public void displayInfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Category: " + category);
+    }
+
+    // Phương thức main để kiểm tra các phương thức khởi tạo
+    public static void main(String[] args) {
+        DVD dvdByTitle = new DVD("Inception");
+        DVD dvdByCategory = new DVD("Sci-Fi", true);
+
+        System.out.println("DVD theo tiêu đề:");
+        dvdByTitle.displayInfo();
+
+        System.out.println("\nDVD theo thể loại:");
+        dvdByCategory.displayInfo();
+    }
+}
+ tham số boolean isCategory  được sử dụng để làm cho phương thức này khác với phương thức sử dụng trường title. Vì cả title và category đều có giá trị kiểu String, chỉ sử dụng các trường đó làm tham số cho hai phương thức khởi tạo sẽ khiến Java bị nhầm lẫn, không biết nên sử dụng phương thức nào. Vì vậy có thể thay đổi tên và kiểu của tham số isCategory 

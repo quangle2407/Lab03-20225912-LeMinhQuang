@@ -1,0 +1,53 @@
+﻿Version Notes Handheld Control Panel
+
+1.0.0.0 - Released 28-May-2023 on github
+	
+	Comments:
+
+		Version put at 1.0.0.0 to accomodate the AutoNetUpdater function.
+
+	Fixes:
+		
+		-Potentially fixed bug where dispatchers were created in non UI classes that were not being disposed of, causing the app to crash.
+		-Fixed bug where RTSS hooks dll was being taken from RTSS program files. For non C drive installations this causes error. Uses local dll.
+		-Fixed splashscreen spinner not spinning at startup (Thanks to Pakuyasa!)
+		-Fixed error where mouse/profile delete prompts don't delete the object.
+		-Fixed error where it kept reapplying profile for default profile that has an exe attached to it.
+		-Fixed error where default profile and a launched game profile would cycle before starting a game.
+		-Fixed error where volume hot keys were not adjusting correctly.
+		-Fixed error where mouse mode was allowed to start without an active mouse mode profile.
+		-Fixed error when no audio driver is installed, get volume returns an error. Now error traps and hides the volume controls on the home page.
+		-Fixed issue where blank records were inserted into resolution/refresh rate lists when editing a profile.
+		-Fixed issue where auto fan on startup was reporting as hardware control on the fan control on the home page.
+		-Fixed error where windows OSK was crashing HCP when trying to bring up on the screen.
+		-Fixed issue where profiles didn't reapply after sleep.
+		-Fixed playnite running as admin.
+		-Fixed issue notify icon is in task tray after closing. This can cause a "unable to show window error" when clicking the notify icon.
+
+	Features:
+
+		-Added RSR support from AMD driver to home page. Existing users need to add it on the customize home page.
+		-Added RTSS directory to app settings.
+		-Added Playnite directory to app settings.
+		-Added optional hide splashscreen at normal startup in settings.
+		-Expanded xbox game scan to all drives, not just C.
+		-Removed the hotkey type option, type is automatically detected based on keyboard or controller input.
+		-Added quick action panel to home page and added setting to enable on home screen.
+
+0.1.0.1 - Released 12-May-2023 on discord
+	
+	Fixes:
+		
+		-Fixed bug where keyboard hot keys required restart to take effect.
+		-Fixed bug where keyboard hot keys were not recognized if the keypresses were not in the same order.
+		-Fixed bug where auto updater would not properly download from github.
+		-Fixed volume/brightness actions not changing volume/brightness.
+
+	Features:
+
+		-Added new action modes where volume, brightness, TDP, gpu clock, resolution, and refresh rate can be cycled through a defined list.
+
+
+0.1.0.0 - Released 07-May-2023
+
+	Baseline released for discord users.
