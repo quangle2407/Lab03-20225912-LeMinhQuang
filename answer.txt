@@ -5,6 +5,7 @@ Có, Java cho phép điều này, nhưng chúng ta cần tạo ra một số đi
 //Toi da sua o day 23/11
 //toi da sua o day bai 3
 
+//toi da o day bai 4
 public class DVD {
     private String title;
     private String category;
