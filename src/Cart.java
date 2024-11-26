@@ -20,55 +20,6 @@ public class Cart {
             System.out.println("The cart is almost full. Cannot add more items.");
         }
     }
- // Method to add multiple DigitalVideoDiscs to the cart
-    /*
-     * public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
-     * for (DigitalVideoDisc disc : dvdList) {
-     * if (qtyOrdered < MAX_NUMBERS_ORDERED) {
-     * itemsOrdered.add(disc);
-     * qtyOrdered++;
-     * System.out.println("The disc \"" + disc.getTitle() + "\" has been added.");
-     * } else {
-     * System.out.println("The cart is full. Cannot add the disc \"" +
-     * disc.getTitle() + "\".");
-     * break;
-     * }
-     * }
-     * }
-     */
-
-    // Method to add an arbitrary number of DigitalVideoDiscs
-    public void addDigitalVideoDisc(DigitalVideoDisc... dvdList) {
-        for (DigitalVideoDisc disc : dvdList) {
-            if (qtyOrdered < MAX_NUMBERS_ORDERED) {
-                itemsOrdered.add(disc);
-                qtyOrdered++;
-                System.out.println("The disc \"" + disc.getTitle() + "\" has been added.");
-            } else {
-                System.out.println("The cart is full. Cannot add the disc \"" + disc.getTitle() + "\".");
-                break; // Stop adding more discs since the cart is full
-            }
-        }
-    }
-
-    // Method to add 2 DigitalVideoDiscs to the cart
-    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
-        if (qtyOrdered < MAX_NUMBERS_ORDERED) {
-            itemsOrdered.add(dvd1);
-            qtyOrdered++;
-            System.out.println("The disc \"" + dvd1.getTitle() + "\" has been added.");
-        } else {
-            System.out.println("The cart is almost full. Cannot add more items.");
-        }
-        if (qtyOrdered < MAX_NUMBERS_ORDERED) {
-            itemsOrdered.add(dvd2);
-            qtyOrdered++;
-            System.out.println("The disc \"" + dvd2.getTitle() + "\" has been added.");
-        } else {
-            System.out.println("The cart is almost full. Cannot add more items.");
-        }
-    }
-
     // Method to remove a DigitalVideoDisc from the cart
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         if (itemsOrdered.remove(disc)) {
@@ -98,7 +49,7 @@ public class Cart {
      * System.out.println("Total cost: " + totalCost());
      * }
      */
-    public void displayCart() {
+    /*public void displayCart() {
         System.out.println("Cart contains " + qtyOrdered + " items:");
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");
@@ -119,3 +70,4 @@ public class Cart {
     }
 
 }
+    */
