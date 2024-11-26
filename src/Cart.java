@@ -20,7 +20,6 @@ public class Cart {
             System.out.println("The cart is almost full. Cannot add more items.");
         }
     }
-
  // Method to add multiple DigitalVideoDiscs to the cart
     /*
      * public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
@@ -70,7 +69,6 @@ public class Cart {
         }
     }
 
-    
     // Method to remove a DigitalVideoDisc from the cart
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         if (itemsOrdered.remove(disc)) {
