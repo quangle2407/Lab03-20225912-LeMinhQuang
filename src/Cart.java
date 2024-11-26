@@ -89,11 +89,33 @@ public class Cart {
     }
 
     // Method to display the current cart status
+    /*
+     * public void displayCart() {
+     * System.out.println("Cart contains " + qtyOrdered + " items:");
+     * for (DigitalVideoDisc disc : itemsOrdered) {
+     * System.out.println(disc);
+     * }
+     * System.out.println("Total cost: " + totalCost());
+     * }
+     */
     public void displayCart() {
         System.out.println("Cart contains " + qtyOrdered + " items:");
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        int index = 1;
         for (DigitalVideoDisc disc : itemsOrdered) {
             System.out.println(disc);
+            System.out.printf("%d. DVD - %s - %s - %s - %d: %.2f $\n",
+                    index++,
+                    disc.getTitle(),
+                    disc.getCategory(),
+                    disc.getDirector(),
+                    disc.getLength(),
+                    disc.getCost());
         }
         System.out.println("Total cost: " + totalCost());
+        System.out.printf("Total cost: %.2f\n", totalCost());
+        System.out.println("****************************************************");
     }
+
 }
