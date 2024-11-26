@@ -15,6 +15,16 @@ public class CartTest {
 
 		// Test the print method
 		cart.displayCart();
+		// Test the search method with ID
+		System.out.println("Testing findDVDById:");
+		cart.findDVDById(1); // Search with ID = 1
+		cart.findDVDById(4); // Search DVD which doesn't exist
+
+		// Test the search method with title keywords
+		System.out.println("\nTesting findDVDByTitle:");
+		cart.findDVDByTitle("Lion"); // Search with keyword "Lion"
+		cart.findDVDByTitle("Science"); // Search with keyword "Science"
+		cart.findDVDByTitle("Adventure"); // Search with keyword which isn't in any titles
 	}
 
 }

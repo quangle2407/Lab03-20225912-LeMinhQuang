@@ -69,5 +69,55 @@ public class Cart {
         System.out.println("****************************************************");
     }
 
-}
+
     */
+
+public void findDVDById(int id) {
+        boolean found = false;
+        for (DigitalVideoDisc disc : itemsOrdered) {
+            if (disc.getId() == id) {
+                System.out.println("DVD found:");
+                System.out.printf("ID: %d - Title: %s - Category: %s - Director: %s - Length: %d - Price: %.2f $\n",
+                        disc.getId(),
+                        disc.getTitle(),
+                        disc.getCategory(),
+                        disc.getDirector(),
+                        disc.getLength(),
+                        disc.getCost());
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("No DVD found with ID: " + id);
+        }
+    }
+
+    public void findDVDByTitle(String keywords) {
+        String[] keywordArray = keywords.toLowerCase().split("\\s+"); // Convert the string of keywords into an array of
+                                                                      // separate words, and split them with space
+                                                                      // characters
+        boolean found = false;
+
+        System.out.println("Search results for keywords: \"" + keywords + "\":");
+        for (DigitalVideoDisc disc : itemsOrdered) {
+            String titleLower = disc.getTitle().toLowerCase(); // Convert the title to lowercase
+            for (String keyword : keywordArray) {
+                if (titleLower.contains(keyword)) {
+                    System.out.printf("ID: %d - Title: %s - Category: %s - Director: %s - Length: %d - Price: %.2f $\n",
+                            disc.getId(),
+                            disc.getTitle(),
+                            disc.getCategory(),
+                            disc.getDirector(),
+                            disc.getLength(),
+                            disc.getCost());
+                    found = true;
+                    break; // Stop checking with other keywords if one has been matched
+                }
+            }
+        }
+        if (!found) {
+            System.out.println("No DVD found matching the keywords: \"" + keywords + "\"");
+        }
+    }
+}
