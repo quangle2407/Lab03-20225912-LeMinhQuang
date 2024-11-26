@@ -6,25 +6,29 @@ public class DigitalVideoDisc {
 	private String director;
 	private int length;
 	private float cost;
-
+	
+	private int id;
+	private static int nbDigitalVideoDiscs = 0;
+	
 	public DigitalVideoDisc() {
-		// TODO Auto-generated constructor stub
+		nbDigitalVideoDiscs++;
+		this.id = nbDigitalVideoDiscs
 	}
 
 	public DigitalVideoDisc(String title) {
-		super();
+		this();
 		this.title = title;
 	}
 
 	public DigitalVideoDisc(String title, String category, float cost) {
-		super();
+		this();
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
 	}
 
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
-		super();
+		this();
 		this.title = title;
 		this.category = category;
 		this.director = director;
